@@ -9,14 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var activePlayer = 1
-    var gamestate=[0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var currentPlayer = 1
+    var status=[0, 0, 0, 0, 0, 0, 0, 0, 0]
 var gameIsActive = true
     let combinations=[[0, 1, 2], [3, 4, 5], [2, 4, 6], [1, 4, 7], [6, 7, 8], [0, 3, 6], [0, 4, 8], [2, 5, 8] ]
     @IBAction func btnPlayAgain(_ sender: AnyObject){
-        gamestate = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        status = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         gameIsActive = true
-        activePlayer = 1
+        currentPlayer = 1
         
         btnPlayAgain.isHidden = true
         lblResult.isHidden = true
@@ -39,29 +39,29 @@ var gameIsActive = true
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    @IBAction func btnPressed(_ sender: UIButton) {
-        if (gamestate[sender.tag-1] == 0 && gameIsActive == true)
+    @IBAction func btnPressed(_ sender: AnyObject) {
+        if (status[sender.tag-1] == 0 && gameIsActive == true)
         {
-        if (gamestate[sender.tag-1]==0){
-            gamestate[sender.tag-1] = activePlayer
+        if (status[sender.tag-1]==0){
+            status[sender.tag-1] = currentPlayer
             
         
-        if (activePlayer==1){
-        sender.setBackgroundImage(UIImage(named: "cross"), for: .normal)
-            activePlayer = 2
+        if (currentPlayer==1){
+        sender.setImage(UIImage(named: "cross"), for: .normal)
+            currentPlayer = 2
         }
     
         else {
-            sender.setBackgroundImage(UIImage(named: "nought"), for: .normal)
-            activePlayer = 1
+            sender.setImage(UIImage(named: "nought"), for: .normal)
+            currentPlayer = 1
         }
     }
         for combination in combinations {
-            if  gamestate[combination[0]] != 0 && gamestate[combination[0]]==gamestate[combination[1]] && gamestate[combination[1]] == gamestate[combination[2]]
+            if  status[combination[0]] != 0 && status[combination[0]]==status[combination[1]] && status[combination[1]] == status[combination[2]]
             {
             gameIsActive = false
                 
-            if gamestate[combination[0]] == 1
+            if status[combination[0]] == 1
                 {
                 lblResult.text = "CROSS WON"
                 }
@@ -77,7 +77,7 @@ var gameIsActive = true
             
         }
             gameIsActive=false
-    for i in gamestate
+    for i in status
             {
         if i==0
         {
@@ -87,13 +87,13 @@ var gameIsActive = true
     }
    if gameIsActive == false
             {
-       lblResult.text = "It was a draw"
+       lblResult.text = "Draw"
        lblResult.isHidden = false
        btnPlayAgain.isHidden = false
    }
     }
-}
+    }
     @IBOutlet weak var lblResult: UILabel!
-}
 
+}
 
