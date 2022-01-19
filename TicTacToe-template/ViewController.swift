@@ -63,12 +63,12 @@ var gameIsActive = true
                 
             if gamestate[combination[0]] == 1
                 {
-                lblResult.text = "CROSS HAS WON"
+                lblResult.text = "CROSS WON"
                 }
                 else
                 {
                 
-                    lblResult.text = "NOUGHT HAS WON"
+                    lblResult.text = "NOUGHT WON"
 
                 }
                 btnPlayAgain.isHidden=false
