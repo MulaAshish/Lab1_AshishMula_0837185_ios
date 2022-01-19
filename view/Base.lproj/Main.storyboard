@@ -108,6 +108,27 @@
                                     <action selector="btnPlayAgain:" destination="q2o-te-CwK" eventType="touchUpInside" id="Yz8-gQ-LHD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="swipe down in blue container to play again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeP-Dt-3px">
+                                <rect key="frame" x="73" y="841" width="321" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N95-QI-96E">
+                                <rect key="frame" x="267" y="133" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoB-Wn-x2S">
+                                <rect key="frame" x="20" y="132" width="146" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4VE-66-j3t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -129,6 +150,8 @@
                     </view>
                     <connections>
                         <outlet property="btnPlayAgain" destination="kll-w1-C07" id="mHd-CZ-Jr6"/>
+                        <outlet property="lblCross" destination="WoB-Wn-x2S" id="kRX-ti-9hH"/>
+                        <outlet property="lblNought" destination="N95-QI-96E" id="cdh-At-FJO"/>
                         <outlet property="lblResult" destination="ejm-fk-chj" id="bJb-HB-88T"/>
                     </connections>
                 </viewController>

@@ -16,6 +16,7 @@
 		1CC8BB05248E156500B0969E /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8BB02248E156500B0969E /* cross.png */; };
 		1CC8BB06248E156500B0969E /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8BB03248E156500B0969E /* board.png */; };
 		1CC8BB07248E156500B0969E /* nought.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8BB04248E156500B0969E /* nought.png */; };
+		DD6A34632797A7BB008929D4 /* winningCombinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6A34622797A7BB008929D4 /* winningCombinations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1CC8BB02248E156500B0969E /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		1CC8BB03248E156500B0969E /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
 		1CC8BB04248E156500B0969E /* nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nought.png; sourceTree = "<group>"; };
+		DD6A34622797A7BB008929D4 /* winningCombinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winningCombinations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +66,9 @@
 		1CC8BAEC248E151200B0969E /* TicTacToe-template */ = {
 			isa = PBXGroup;
 			children = (
-				DD6A345F27979982008929D4 /* model */,
 				1CC8BB01248E156500B0969E /* res */,
 				1CC8BAED248E151200B0969E /* AppDelegate.swift */,
 				1CC8BAEF248E151200B0969E /* SceneDelegate.swift */,
-				1CC8BAF1248E151200B0969E /* ViewController.swift */,
-				1CC8BAF3248E151200B0969E /* Main.storyboard */,
 				1CC8BAF6248E151500B0969E /* Assets.xcassets */,
 				1CC8BAF8248E151500B0969E /* LaunchScreen.storyboard */,
 				1CC8BAFB248E151500B0969E /* Info.plist */,
@@ -90,6 +89,7 @@
 		DD6A345F27979982008929D4 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				DD6A34622797A7BB008929D4 /* winningCombinations.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -97,6 +97,8 @@
 		DD6A346027979B6E008929D4 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1CC8BAF3248E151200B0969E /* Main.storyboard */,
+				DD6A345F27979982008929D4 /* model */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -104,6 +106,7 @@
 		DD6A346127979B78008929D4 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CC8BAF1248E151200B0969E /* ViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6A34632797A7BB008929D4 /* winningCombinations.swift in Sources */,
 				1CC8BAF2248E151200B0969E /* ViewController.swift in Sources */,
 				1CC8BAEE248E151200B0969E /* AppDelegate.swift in Sources */,
 				1CC8BAF0248E151200B0969E /* SceneDelegate.swift in Sources */,
