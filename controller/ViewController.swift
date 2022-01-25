@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     var crosswon=0
@@ -45,6 +46,7 @@ var intialstatus=winningCombinations()
         btnPlayAgain.isHidden=true
         swipeableView.addGestureRecognizer(swipeGestureRecognizerDown)
         becomeFirstResponder()
+        initMydata()
         // Do any additional setup after loading the view.
     }
     override var canBecomeFirstResponder: Bool{
@@ -147,6 +149,23 @@ var intialstatus=winningCombinations()
            let button = view.viewWithTag(i) as! UIButton
            button.setImage(nil, for: UIControl.State())
        }
+    }
+    func initMydata()
+    {
+        let appDeligate = UIApplication.shared.delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDeligate.persistentContainer.viewContext
+        let entity=NSEntityDescription.entity(forEntityName: "Game", in: context)
+        let newGame = Game(entity: entity!, insertInto: context)
+        newGame.cross=0
+        newGame.nought=0
+        newGame.status=[0,0,0,0,0,0,0,0,0]
+        do{
+        try context.save()
+        }
+        catch{
+            print ("error")
+        }
+
     }
     func undoPlay(){
         combinations.intialstatus = temp
