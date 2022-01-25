@@ -17,6 +17,7 @@
 		1CC8BB06248E156500B0969E /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8BB03248E156500B0969E /* board.png */; };
 		1CC8BB07248E156500B0969E /* nought.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8BB04248E156500B0969E /* nought.png */; };
 		DD6A34632797A7BB008929D4 /* winningCombinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6A34622797A7BB008929D4 /* winningCombinations.swift */; };
+		DDB3473E279F7B9D002C5FD5 /* TicTacToe-template.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDB3473C279F7B9D002C5FD5 /* TicTacToe-template.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1CC8BB03248E156500B0969E /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
 		1CC8BB04248E156500B0969E /* nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nought.png; sourceTree = "<group>"; };
 		DD6A34622797A7BB008929D4 /* winningCombinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winningCombinations.swift; sourceTree = "<group>"; };
+		DDB3473D279F7B9D002C5FD5 /* TicTacToe-template.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "TicTacToe-template.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		1CC8BAE1248E151200B0969E = {
 			isa = PBXGroup;
 			children = (
+				DDB3473C279F7B9D002C5FD5 /* TicTacToe-template.xcdatamodeld */,
 				DD6A346127979B78008929D4 /* controller */,
 				DD6A346027979B6E008929D4 /* view */,
 				1CC8BAEC248E151200B0969E /* TicTacToe-template */,
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB3473E279F7B9D002C5FD5 /* TicTacToe-template.xcdatamodeld in Sources */,
 				DD6A34632797A7BB008929D4 /* winningCombinations.swift in Sources */,
 				1CC8BAF2248E151200B0969E /* ViewController.swift in Sources */,
 				1CC8BAEE248E151200B0969E /* AppDelegate.swift in Sources */,
@@ -386,6 +390,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DDB3473C279F7B9D002C5FD5 /* TicTacToe-template.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DDB3473D279F7B9D002C5FD5 /* TicTacToe-template.xcdatamodel */,
+			);
+			currentVersion = DDB3473D279F7B9D002C5FD5 /* TicTacToe-template.xcdatamodel */;
+			path = "TicTacToe-template.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1CC8BAE2248E151200B0969E /* Project object */;
 }

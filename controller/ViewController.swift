@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     var crosswon=0
     var noughtwon=0
+    var currentBtn=UIButton()
+    var temp = [Int]()
     private let swipeableView: UIView = {
           // Initialize View
           let view = UIView(frame: CGRect(origin: .zero,
@@ -42,13 +44,31 @@ var intialstatus=winningCombinations()
         swipeGestureRecognizerDown.direction = UISwipeGestureRecognizer.Direction.down
         btnPlayAgain.isHidden=true
         swipeableView.addGestureRecognizer(swipeGestureRecognizerDown)
+        becomeFirstResponder()
         // Do any additional setup after loading the view.
+    }
+    override var canBecomeFirstResponder: Bool{
+        return true
+    }
+    
+   // override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        
+   // }
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake{
+            undoPlay()
+           
+        }
+            
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     @IBAction func btnPressed(_ sender: AnyObject) {
+        currentBtn=sender as! UIButton
+        temp=combinations.intialstatus
+
         if (combinations.intialstatus[sender.tag-1] == 0 && gameIsActive == true)
         {
         if (combinations.intialstatus[sender.tag-1] == 0){
@@ -115,6 +135,7 @@ var intialstatus=winningCombinations()
 
     }
     func _playAgain(){
+        combinations.intialstatus=[0, 0, 0, 0, 0, 0, 0, 0, 0]
         gameIsActive = true
        currentPlayer = 1
        
@@ -126,6 +147,18 @@ var intialstatus=winningCombinations()
            let button = view.viewWithTag(i) as! UIButton
            button.setImage(nil, for: UIControl.State())
        }
+    }
+    func undoPlay(){
+        combinations.intialstatus = temp
+        print(combinations.intialstatus)
+        if currentPlayer == 1{
+            currentPlayer = 2
+        }
+        else{
+            currentPlayer = 1
+        }
+        currentBtn.setImage(nil, for: .normal)
+        
     }
 }
 
